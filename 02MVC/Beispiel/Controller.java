@@ -32,8 +32,8 @@ public class Controller {
 				System.out.println("No item selected!");
 			}
 		});
-		view.getInputField().setOnKeyPressed(new EventHandler<KeyEvent>() {
-
+		view.getInputField().setOnKeyPressed(new EventHandler<KeyEvent>() { // wenn inputField fokussiert ist kann mit der ENTER-Taste
+										    // der add Button bedient werden		
 			@Override
 			public void handle(KeyEvent event) {
 				if (event.getCode() == KeyCode.ENTER) {
