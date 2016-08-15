@@ -1,0 +1,2 @@
+Maximierung der Performanz durch paralles ARbeiten und optimales Ausnutzen der verfügbaren Rechnerkapazität (zb durch Threads)
+Synchronisation des Zugriffs auf gemeinsame Ressourcen und hierbei Vermeidung von Deadlock-Situationen
