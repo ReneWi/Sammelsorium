@@ -1,0 +1,16 @@
+Serialisierung mit XStream: 
+
+Bibliothek : com.thoughtworks.xstream.XStream
+keine änderungen an zu serialisierender Klasse nötig ( keine getter/ setter , kein implements Serialisable
+kein Standartkonstrukutor)
+nutzt intern Reflection
+Serialisierung wird durch XStream Objekt realisiert
+transient funktioniert!!
+statische variablen werden nicht serialisiert
+
+Deserialisierung: 
+
+auch durch XStream objekt
+nachträglich hinzugefügte attribute werden mit standartwert versehen 
+nachträglich entfernte attribute lösen exception aus ( anstatt attribut zu entfernen kann man es als transient markieren
+dadurch wird es bei der deserialisierung übergangen)
