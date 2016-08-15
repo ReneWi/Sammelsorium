@@ -8,10 +8,10 @@ public class SerializableObject<T> implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private transient int hiddenhInt = 42;
+	private transient int hiddenhInt = 42;	// <---- funktioniert noch nicht müssen rausfinden wie !!
 	private T value;
 	
-	public SerializableObject(){}
+	public SerializableObject(){} // <---- Dont you ever forget this shit !
 	
 	public SerializableObject(T value){
 		this.value = value;
