@@ -1,0 +1,4 @@
+Komplexe Anwendungen zB verteilte Softwaresysteme sollten in mehreren Abstraktionsebenen organisiert werden 
+Operationen höherer Abstraktionsebenen verwenden über genau festgelegte Schnittstellen die Operationen niedrigerer Ebenen
+Implementierungen von über oder untergeordneten Komponenten können geändert werden ohne , dass die Implementierung der restlichen 
+Komponenten betroffen ist
