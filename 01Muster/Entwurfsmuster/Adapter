@@ -1,0 +1,2 @@
+Übersetzen des Interfaces einer Klasse in ein anderes Interface
+Dadurch wird Zusammenarbeit von Klassen im Fall von inkompatiblen Interfaces ermöglicht
