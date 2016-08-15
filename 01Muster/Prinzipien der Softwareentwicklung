@@ -1,0 +1,25 @@
+Abstraktion: Konzentration auf das Wesentliche, absehen von
+speziellen, untergeordneten Details
+
+Hierarchisierung: Anordnung der Elemente in einer
+Rangordnung. Elemente gleicher Rangordnung be nden sich
+auf derselben Stufe/Schicht/Ebene
+
+Modularisierung: Organisation des Softwaresystems in
+Komponenten mit klar de nierten Schnittstellen und
+Wiederverwendbarkeit in anderen Systemen
+
+Lokalitat: Alle wichtigen Informationen derselben Situation
+sind an einem Platz vorhanden
+
+Dokumentation: Die Dokumentation muss integraler
+Bestandteil der Software-Entwicklung sein
+
+Geheimnisprinzip: Code-Bestandteile (z.B. Klassen) sollen nur
+im vorgesehenen Sinne verwendet werden (z.B. kontrollierter
+Zugri  auf Attribute durch Kapselung und
+"private"-Deklaration) 
+
+Standardisierung: Einheitliches Erscheinungsbild von
+Programmen und Dokumenten. Einhaltung
+betrieblicher/uberbetrieblicher Konventionen und Normen
