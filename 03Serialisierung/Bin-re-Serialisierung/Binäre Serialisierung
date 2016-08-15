@@ -1,2 +1,13 @@
 Serialisieren mit IO bib
 Klassen die serialisiert werden müssen das interface "Serializable" implementieren 
+Statische variablen werden nicht serialisiert da sie zur klasse und nicht zum objekt gehören 
+KeyWord : "transient" -> markiert variablen die nicht serialisiert werden sollen
+objekte auf die ein serialisiertes objekt eine Referenz hat werden auch serialisiert
+mit transient markierte attribute werden beim deserialisieren mit einem typspezifischen standartwert belegt
+Objekte können nur deserialisiert werden wenn der bytecode der klasse vorhanden ist, dieser wird nicht mit in das serialisierte 
+objekt geschrieben
+die klasseninformationen des serialisierten objektes und des zu deserialisierenden objektes müssen kompatibel sein
+serialVersionUID zeigt objektsversion an 
+ist die version des zu deserialisierenden objektes nicht die gleiche wie die aktuelle wird eine InvalidClassException geworfen
+wenn variablen hinzukommen werden sie älteren objekten nach der deserialisierung mit einem typspezifischen standartwert initialisiert
+
