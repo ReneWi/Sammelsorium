@@ -1,1 +1,27 @@
-bla
+Softwareentwicklung beschrankt sich nicht nur auf die
+Programmierung, sondern ist ein mehrstufiger Prozess der aus
+mehreren Schritten besteht
+
+Dabei ist es wunschenswert fur den eigentlichen
+Entwicklungsprozess, sowie fur die einzelnen Schritte auf
+bestehende und erprobte Muster zuruckzugreifen
+
+Vorteile: 
+
+Wiederverwenden von allgemeinem Wissen uber Software-Entwicklung
+
+Losungen fur alte Probleme als Entwurfe 
+fur ahnliche, neue Probleme
+ubernehmen / adaptieren und damit Steigerung der
+Effizienz bei der Entwicklung
+
+Vorgefertigte, einfach bedienbare Sammlung von Mustern
+liefert architektonische Leitlinien und vermeidet monolithische
+Implementierungen
+
+Reduzierung der Fehlerquellen
+
+Mustertypen : 
+Prozessmuster
+Architekturmuster
+Entwurfsmuster
