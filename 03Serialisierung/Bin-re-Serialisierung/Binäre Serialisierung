@@ -1,1 +1,2 @@
-Youre ad could be here !!
+Serialisieren mit IO bib
+Klassen die serialisiert werden müssen das interface "Serializable" implementieren 
