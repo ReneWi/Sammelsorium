@@ -31,6 +31,10 @@ public static void main(String[] args) {
 	}
 	System.out.println(blub.getVal());
 	System.out.println(blub.getNumber());
-	
+	/*Output :
+	*42
+	*blablablabla
+	*0
+	*/
 }
 }
