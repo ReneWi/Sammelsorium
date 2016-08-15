@@ -29,5 +29,5 @@ public class SerializableObject<T> implements Serializable {
 	
 	public void setNumber(int number){
 		this.hiddenhInt = number;
-	}
+	} 
 }
