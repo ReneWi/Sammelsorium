@@ -1,0 +1,3 @@
+Funktion die Objekte erzeugt
+Schittstelle für Objekterzeugung liegt in Oberklasse
+Konkrete Implementierung für die Erzeugung von Objekten liegt in der abgeleiteten Unterklasse
