@@ -1,0 +1,5 @@
+Beschreibt Schemata zur Verfeinerung/Realisierung von Subsystemen
+Gibt Leitlinien für die Strukturen von miteinander kommunizierenden Objekten vor
+Im Bezug auf Architekturmuster, dekcen die Entwurfsmuster jeweils einen kleineren Anteil des Softwaresystems ab und sind 
+von allgemeiner Art
+Wahl eines Entwurfsmusters hat keine Auswirkung auf die Struktur des gesamten Software-Systems
