@@ -10,3 +10,8 @@ Serialisierung mit java.beans:
 funktioniert analog zum binären Serialisieren aber ObjetOutputStream wird durch XMLEncoder ersetzt
 statische variablen werden nicht serialisiert
 Mithilfe von Introspector/PropertyDescriptor können attribute als transient markiert werden 
+
+Deserialisierung mit java.beans: 
+XMLDecoder statt ObjectInputStream
+nachträglich hinzugefügte attribute werden mit standartwert versehen
+nachträglich entfernte attribute lösen java.lang.NoSuchMethodException aus aber Objekt wird trotzdem korrekt deserialisiert
