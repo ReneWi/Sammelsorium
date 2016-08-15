@@ -1,0 +1,4 @@
+in bestimmten komplexen Anwendungen sollen einzelne Aktionen austauschbar sein , ohne die Schnittstelle des Aufrufs der Aktion zu verändern
+Damit bleibt auf höchster Abstraktionsebene der Code erhalten, das Programmverhalten kann dynamisch verändert werden
+Auszuführende Aktion in einer Klasse kapseln
+Wird oft für Listen von Aktionen verwänden (zb Rückgängig-Funktion)
