@@ -1,0 +1,12 @@
+ERstellen eines Ersatzobjektes(Stellvertreter, engl. "proxy") für das eigentliche "Zielobjekt"
+Clients verwenden unmittelbar nur das ERsatzobjekt, über welches das Zielobjekt ggf. indirekt angesprochen wird
+
+Remote Proxy:
+Bei Client-/Server-Anwendungen, lokaler(d.h. clientseitiger) ERsatz für ein Objekt im remote(d.h. serverseitigen) Addressraum
+
+Virtual Proxy:
+Aufschieben der vollständigen Erzeugung des Zielobjektes solange dieses nicht tatsächlich gebraucht wird, 
+dadurch Einsparung von Rechenzeit
+
+Protection Proxy:
+Zugangskontrolle zu Zielobjekt mit speziellen Rechten versehen
