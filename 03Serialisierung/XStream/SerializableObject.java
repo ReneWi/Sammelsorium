@@ -3,9 +3,6 @@ public class SerializableObject<T> {
 	
 	private transient int hiddenhInt = 42;
 	private T value;
-	
-	public SerializableObject(){}
-	
 	public SerializableObject(T value){
 		this.value = value;
 	}
