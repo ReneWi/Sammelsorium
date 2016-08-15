@@ -1,0 +1,4 @@
+Stukturierung verteilter SW-Systeme als entkoppelte Komponenten inklusive einem Vermittler
+Kommunikation/Kooperation durch Aufruf entfernter Dienste. Vermittler(Broker) untersützt die Kommunikation/Kooperation
+
+Bsp: RMI
