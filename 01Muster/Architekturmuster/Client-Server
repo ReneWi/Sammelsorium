@@ -1,0 +1,4 @@
+C-S Modell : Verteilung von Aufgaben und Dienstleistungen in einem Netzwerk. Beschreibt die Strukturierung verteilter SW-Systeme
+als entkoppelte Komponenten
+Server: Programm das mit einem anderen Programm(Client) kommuniziert um ihm Zugang zu einem Dienst zu verschaffen 
+Client: Fordert Dienst bei einem Server an, der diesen bereit stellt
