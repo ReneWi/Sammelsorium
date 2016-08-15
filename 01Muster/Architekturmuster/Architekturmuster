@@ -1,0 +1,18 @@
+Auswahl des Architekturmusters für ein konkretes Software-System ist eine Grundsatzentscheidung
+
+Ausgewähltes Muster ist eine Schablone für die Architektur des konkreten Software-Systems
+
+Spiegelt die grundsätzliche Strukturierung des konkreten Software-Systems wieder
+
+Beschreibt die Menge vordefinierter Subsysteme mit deren jeweiligen Zuständigkeitsbereichen
+
+Regelt die Beziehungen zwischen den Subsystemen
+
+Beispiele : 
+MVC
+Concurrency
+Reflection
+Database Access
+Layers
+Client-Server
+Broker
