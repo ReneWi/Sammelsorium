@@ -8,6 +8,7 @@ import java.io.IOException;
 public class XML {
 public static void main(String[] args) {
 	SerializableObject<String> obj = new SerializableObject<String>("Unkreativ");
+	obj.setNumber(14);
 	System.out.println(obj.getNumber());
  	try(FileOutputStream fo  = new 	FileOutputStream("dat_Ei.xml");
 			XMLEncoder encoder = new XMLEncoder(fo)){
@@ -36,7 +37,7 @@ public static void main(String[] args) {
  	/* momentaner Output: 
  	*42
  	*Unkreativ
- 	*42                     <----------------- Noch falsch !!! 
+ 	*42                    
  	*/
 }
 }
