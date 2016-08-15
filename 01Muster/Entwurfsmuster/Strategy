@@ -1,0 +1,5 @@
+Kapselung von Algorithmen, die auf unterschiedliche WEise das gleiche Ziel verfolgen
+Es existiert eine Schnittstelle für alle gemeinsamen Algorithmen, durch die Angabe von Regeln wird eine konkrete 
+Instanz einer Strategie erstellt
+Strategien können zur Laufzeit ausgetauscht werden 
+Es ist einfach neue Strategien hinzuzufügen 
