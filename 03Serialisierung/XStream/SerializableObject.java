@@ -1,7 +1,3 @@
-import java.beans.Transient;
-import java.io.Serializable;
-
-
 public class SerializableObject<T> {
 
 	
