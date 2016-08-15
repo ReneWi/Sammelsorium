@@ -1,0 +1,4 @@
+In einer abstrakten Klasse wird das Skellet eines Algorithmus definiert, 
+die Implementierung der einzelnen Schritte erfolgt jedoch in Sublklassen, 
+damit können später einzelne Schritte auch verändert werden, ohne dass die Grunstruktur des Algorithmus
+davon betroffen ist 
