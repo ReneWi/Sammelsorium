@@ -8,7 +8,7 @@ public class SerializableObject<T> implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private transient int hiddenhInt = 42;	// <---- funktioniert noch nicht müssen rausfinden wie !!
+	private int hiddenhInt = 42;	// <---- funktioniert noch nicht müssen rausfinden wie !!
 	private T value;
 	
 	public SerializableObject(){} // <---- Dont you ever forget this shit !
@@ -27,6 +27,7 @@ public class SerializableObject<T> implements Serializable {
 		return hiddenhInt;
 	}
 	
+	@Transient
 	public void setNumber(int number){
 		this.hiddenhInt = number;
 	} 
