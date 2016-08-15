@@ -1,0 +1,11 @@
+Beschreibt die Schritte der Softwareentwicklung und deren Reihenfolge: 
+1. Analysieren : Aufgabenstellung klären
+2. Spezifizieren: Funktion des Systems festlegen
+3.Entwerfen: Struktur des Systems festlegen
+4.Implementieren : Programmcode erstellen
+5.Testen: Überprüfen der Funktionalität
+6.Nutzen : Einsetzen des Systems
+7.Warten: Evtl. ändern von Komponenten
+
+Befasst sich mit der Organisation und Durchführung eines Projektes zur Software-Entwicklung
+durch eine Gruppe von Mitarbeitern(Projektmanagement)
