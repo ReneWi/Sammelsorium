@@ -1,0 +1,4 @@
+Model enthält Kernfunktion
+View präsentiert dem Anwender Informationen 
+Controller zuständig für Bedieneingaben
+Mechanismus zur Benachrichtigung über Änderungen für Konsistenz zw. Benutzerschnittstelle und Modell
