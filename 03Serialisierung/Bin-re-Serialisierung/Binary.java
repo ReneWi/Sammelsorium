@@ -6,20 +6,22 @@ import java.io.ObjectOutputStream;
 
 public class Binary {
 public static void main(String[] args) {
-	String s = "Blablablabla";
+	String s = "blablablabla";
+	SerializableObject<String> object = new SerializableObject<String>(s);
+	System.out.println(object.getNumber());
 	try(FileOutputStream f= new FileOutputStream("dateipfad.ser");
 		ObjectOutputStream o = new ObjectOutputStream(f)){
-		o.writeObject(s);
+		o.writeObject(object);
 		o.flush();
 	} catch (IOException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
 	
-	String blub = null;
+	SerializableObject<String>blub = null;
 	try(FileInputStream fi = new FileInputStream("dateipfad.ser");
 		ObjectInputStream oi = new ObjectInputStream(fi)){
-		blub = (String) oi.readObject();
+		blub = (SerializableObject<String>) oi.readObject();
 	} catch (IOException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
@@ -27,7 +29,8 @@ public static void main(String[] args) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
-	System.out.println(blub);
+	System.out.println(blub.getVal());
+	System.out.println(blub.getNumber());
 	
 }
 }
