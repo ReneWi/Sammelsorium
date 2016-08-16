@@ -1,1 +1,41 @@
-bla
+bei größeren datenmengen sollte in datenbanken gespeichert werden
+Datenbanksystem besteht aus 2 Teilen: 
+Datenbank(Database)
+Datenbankverwaltungssystem(Database Management System, DBMS)
+
+Jeder datenbank liegt ein datenbankmodell zugrunde: 
+relational (tabellenbasiert, sehr verbreitet) Bsp: JDBC
+objektorientiert(direkte Speicherung von objekten, wenig verbreitet) Bsp : OpenJPA
+
+Datenbankverwaltungssystem: 
+verantwortlich fpür die strukturierte Speicherung der Daten
+stellt kontrollierte lesende und schreibende Zugriffsmöglichkeit bereit
+Datenbanksprache: 
+externe Schnittstelle zur Formulierung von Anfragen
+
+
+Relationale Datenbanken: 
+Relation : Tabelle mit Zeilen und Spalten 
+Zeile : Relationstupel
+Spalte: Relationsattribut
+inhalt der datenbank: menge der relationstupel
+datenmodelle(-schemata) in der Datenbank: Struktur der Tabellen(Anzahl/Typen der Spalten)
+Zugriffsmöglichkeiten auf relationale Datenbank nötig 
+Java-Zugriff mit Java Database Connectivity(JDBC)
+
+SQL 
+Bedeutendste Anfrage-(und Manipulations-)sprache für relationale Datenbanken
+Von IBM entwickelt seit Anfang der siebziger Jahre
+erste SQL- norm vom ANSI - Konsortium 1986 verabschiedet
+
+DLL (Data Definition Language):
+ERstellen der Tabellen, Beziehungen und Indizes 
+SQL anweisungen : CREATE/DROP TABLE
+
+DML(Data Manipulation Language):
+Daten hinzufügen und löschen 
+INSERT INTO , DELETE , VALUE...
+
+DQL(Data Query Language)
+Daten auswählen und filtern
+SELECT, FROM, WHERE, ORDERED BY, AND, EXISTS, JOIN, ...
