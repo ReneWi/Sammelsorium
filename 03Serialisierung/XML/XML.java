@@ -34,10 +34,10 @@ public static void main(String[] args) {
 	}
  	System.out.println(echo.getVal());
  	System.out.println(echo.getNumber());
- 	/* momentaner Output: 
+ 	/* Output: 
  	*42
  	*Unkreativ
- 	*42                    
+ 	*0                    
  	*/
 }
 }
