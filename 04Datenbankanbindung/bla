@@ -33,7 +33,7 @@ ERstellen der Tabellen, Beziehungen und Indizes
 SQL anweisungen : CREATE/DROP TABLE
 
 DML(Data Manipulation Language):
-Daten hinzufügen und löschen 
+Daten hinzufügen und löschen  
 INSERT INTO , DELETE , VALUE...
 
 DQL(Data Query Language)
