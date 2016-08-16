@@ -1,1 +1,29 @@
+4 Treiber Typen : 
+1. JDBC-ODBC Bridge Driver
+2. Native plattformeigene JDBC Driver
+3. Universelle JDBC Driver
+4. Direkter Netzwerktreiber
 
+typ 1 JDBC-ODBC-Bridge: 
+Open Database Connectivity Standard(ODBC) ist der Microsoft-Standard für den zugriff auf sql datenbanken
+wandelt jdbc aufrufe in odbc um die dann ausgeführt werden
+performanz ist oft nicht gut
+
+typ 2 native plattformeigene JDBC-treiber:
+jdbc aufrufe werden in aufrufe einer plattform spezifischen 
+datenbankmanagementsystem-API übersetzt
+Betriebssystem-(Plattform-) spezifische programmbibliothek nötig
+implementierung der jdbc aufrufe ist nicht portabal, da auf 
+plattformspezifische zugriffsmöglichkeiten für die datenbank angewiesen
+
+Typ 3 Universelle JDBC-Treiber:
+kommunikation mit DAtenbank-server über eine Softwareschicht(Middleware, Anwendungsserver)
+die zwischen Anwendung und DBS liegt
+Middleware leistet _Vermittlerrolle und leitet answeisungen über netzwerkprotokoll an 
+DBS weiter dh übersetzt DB anfragen in DBS spezifische methoden
+middleware kann als Klassenbibliothek zu java applikation dazugebunden werden
+
+Typ 4 Direkte Netzwerktreiber:
+wie typ-3-treiber jedoch ohne middleware 
+kommunikation direkt mit dem Datenbank server
+performanteste Lösung jedoch nicht realisierbar bei datenbanken ohne netzwerkprotokoll
