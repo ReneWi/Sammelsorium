@@ -51,7 +51,7 @@ public class Connector{
 			PreparedStatement ps = con.prepareStatement(  // <--- PreparedStatement damit Nutzer nicht sicherheitslücken ausnutzen kann
 									// ist außerdem schneller 
 					"INSERT INTO products(name, price, quantity) VALUES(?,?,?)",
-					Statement.RETURN_GENERATED_KEYS);
+					Statement.RETURN_GENERATED_KEYS);// id wird von datenbank erzeugt
 			ps.setString(1, "Karl");
 			ps.setDouble(2,2.5);
 			ps.setInt(3, 1);
