@@ -48,10 +48,9 @@ public class Connector{
 		//------------insert into table -------------------
 		long id = -1;
 		try {
-			PreparedStatement ps = con.prepareStatement(  // <--- PreparedStatement damit Nutzer nicht sicherheitslücken ausnutzen kann
-									// ist außerdem schneller 
+			PreparedStatement ps = con.prepareStatement(
 					"INSERT INTO products(name, price, quantity) VALUES(?,?,?)",
-					Statement.RETURN_GENERATED_KEYS);// id wird von datenbank erzeugt
+					Statement.RETURN_GENERATED_KEYS);
 			ps.setString(1, "Karl");
 			ps.setDouble(2,2.5);
 			ps.setInt(3, 1);
@@ -60,6 +59,8 @@ public class Connector{
 			if(rs.next()){
 				id = rs.getLong("id");
 			}
+			ps.close();
+			rs.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -78,13 +79,24 @@ public class Connector{
 				 id = rs.getLong("id");
 				 System.out.println("Name : "+ name + " Quantity: "+ quantity +
 						 " Price : " +price +" id : " + id);
+				 ps.close();
+				 rs.close();
+				 
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
+		//------------------Close----------------------
+		try {
+			con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		
 		
 
 	}
+}
 }
