@@ -1,0 +1,21 @@
+Statement createStatement()
+PreparedStatement prepareStatement(String sql) Vorbereitetes Statement ist sicherer und schneller
+CallableStatement prepareCall(String sql) wird genutzt um "Stored Procedures" auf datenbankserver aufzurufen
+Stored Procedure ist eine Anweisungsfolge, die auf dem Datenbankserver implementiert ist und aufgerufen werden kann 
+----> schneller da weniger daten zwischen server und client ausgetauscht werden
+executeUpdate() : zur Modifikation der Datenbank, für Update-,Insert, oder Delete-Anweisung
+executeQuery(): für Anfragen an datenbank mit ergebnisRückgabe, für SELECT anweisung
+ResultSet für anweisungen 
+alternativ RowSet ... erbt von REsultSet ist aber Datencontainer und benötigt keine Datenbankverbindung nach der Abfrage
+RowSet ist serialisierbar
+
+RowSets: 
+CachedRowSet: 
+Benötigt initiale Verbindung zur datenbank. mit sql-anweisungen werden alle ergebnisdaten übertragen und gespeichert
+für das auslesen aus CachedRowSet-Objekten ist keine verbindung zur datenbank mehr nötig 
+Beispielanwendung : Datenübertragung auf mobile endgeräte 
+
+WebRowSet : Erweitert CachedRowSet und bildet Daten und Operationen in XML ab, ums sie für Web-services übertragen 
+zu können 
+
+man kann die klasse RowSetFactory verwenden um verschiedene RowSets zu erzeugen
