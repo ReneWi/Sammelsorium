@@ -48,7 +48,8 @@ public class Connector{
 		//------------insert into table -------------------
 		long id = -1;
 		try {
-			PreparedStatement ps = con.prepareStatement(
+			PreparedStatement ps = con.prepareStatement(  // <--- PreparedStatement damit Nutzer nicht sicherheitslücken ausnutzen kann
+									// ist außerdem schneller 
 					"INSERT INTO products(name, price, quantity) VALUES(?,?,?)",
 					Statement.RETURN_GENERATED_KEYS);
 			ps.setString(1, "Karl");
