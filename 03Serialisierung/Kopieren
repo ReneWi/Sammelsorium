@@ -1,1 +1,26 @@
+Warum kopieren? 
+erstellen von sehr ähnlichen Datensätzen
+sicherung speicherung von daten 
+2 varianten geläufig
 
+Shallow copy / flache kopie
+kopieren von allen direkten attributen des Objekts
+referenzierte objekte werden nicht kopiert (nur die referenzen darauf!)
+umgesetzt mit .clone()
+werden attribute der geklonten objekte nachträglich verändert, so verändern ich auch die referenzen der flatcopy
+
+Deep copy/ tiefe kopie
+kopieren von allen direkten attributen des objekts
+alle referenzierten objekte werden ebenfalls kopiert
+
+Umsetzung mit eigener funktion : 
+jedes feld muss manuell gelesen und gesetzt werden 
+zb. copy constructor
+- höherer programmieraufwand
+- risiko felder zu vergessen
++ maximale performance
+
+umsetzung mit serialisierung 
+speichern des objektes in datei oder byte array
++minimaler programmieraufwand
+- meist langsamer durch overhead der serialisierung 
