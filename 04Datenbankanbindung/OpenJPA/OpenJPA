@@ -1,0 +1,33 @@
+speicherung von objekten in datenbank
+objekt muss als entity bezeichnet sein
+jede klasse muss über standartkonstruktor verfügen 
+annotationen werden benötigt
+jede entity muss primärschlüssel besitzen
+jede klasse die entity sein soll wird mit @Entity markiert
+
+hat klasse nicht nur primärschlüssel sondern zusammengesetzten schlüssel muss @IdClass(Schlüsselklasse) verwendet werden
+zusammengesetzte primärschlüssel sollten vermieden werden
+mit @Id wird primärschlüssel markiert
+@Id sollte vor jeweiligen getter-methode stehen kann aber auch direkt vor attribut stehen auch wenn dieses private ist
+mit @GeneratedValue werden Primärschlüssel automatisch generiert
+
+Für zugriff auf datenbank wird ein EntityManager benötigt
+kann von EntityManagerFactory erzeugt werden 
+dafür kann man Konfigurationsdatei angeben oder nicht
+
+was in der konfigurationsdatei stehen muss :
+alle klassen mit vollem namen
+Treiber 
+Addresse 
+Benutzername
+Passwort
+openjpa.RuntimeUnenhancedClasses , value = supported <-- ermöglicht dass klassen automatisch während laufzeit abgeleitet werden können
+openjpa.jdbc.SynchronizeMappings , value = true <-- automatisches anlegen von tabellen ist erlaubt falls diese nicht vorhanden sind
+
+Mit EntityManager objekt können EntityTransaction objekte erzeugt werden
+diese werden benutzt um atomare Transaktionen zu kennzeichnen und auszuführen 
+Ablauf : 
+begin() startet Transaktion
+persist(Object) speichert Objekt
+createQuery("Query") erstellt abfrage (sprache ist Java Persistence Query Language(JPQL))
+commit() beendet Transaktion
