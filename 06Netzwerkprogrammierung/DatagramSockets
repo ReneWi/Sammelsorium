@@ -1,0 +1,14 @@
+Server: 
+server verfügt über datagram socket mit informationen über welchen port er erreichbar ist
+durch receive() wartet sever auf pakete
+kommt paket an kann es von server bearbeitet werden  paket enthält daten des absenders damit geantwortet werden kann
+für antwort bereitet server ebenfalls paket vor und schickt es an die client adresse
+es besteht keine verbindung es werden nur pakete verschickt
+
+Client : 
+cient erstellt datagramsocket über welches er senden und empfangen kann
+anschließend erstellt client paket mit seiner anfrage und verschickt dieses
+es wird auf antwort von server gewartet
+es können weitere pakete verschickt werden oder mit den daten weitergearbeitet werden
+
+zur abarbeitung mehrerer pakete müssen threads erstellt werden 
