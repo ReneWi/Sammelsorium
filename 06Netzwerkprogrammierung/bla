@@ -36,5 +36,5 @@ Benutzt UDP/IP protokoll
 es wird keine verbindung zwischen kommunikationspartner aufgebaut
 datagram werden einzeln verschickt und gelangen auf verschiedenen wegen und in unterschiedlicher reihenfolge ans ziel
 übertragung nicht zuverlässig 
-geschwindigkeit vor sicherheit
+geschwindigkeit vor sicherheit 
 
