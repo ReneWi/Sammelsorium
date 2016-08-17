@@ -1,1 +1,53 @@
-bla
+Nebenläufiges Programmstück
+Nebenläufige Programmteile werden von verschiedenen Prozessorkernen abgearbeitet
+Falls nur ein Prozessor verfügbar wird zwischen den Threads hin und her geswitcht sodass die Illusion von 
+Nebenläufigkeit entsteht
+
+Zwei Thread-Typen in Java : 
+Runnable-Objekt
+Callable-Objekt
+
+Runnable:
+Runnable-Interface muss implementiert werden oder es muss von Thread abgeleitet werden 
+Thread ableitung selten da es in java keine mehrfachvererbung gibt
+klassen vom typ runnable müssen run() methode implementieren 
+start der run() methode mit .start()
+ausführen von run() ohne start() würde keine nebenläufigkeit erzeugen
+Threads sind nicht serialisierbar !!
+um auf die abarbeitung eines threads zu warten wird die methode join() auf dem thread aufgerufen
+join() erst aufrufen wenn alle threads gestartet --> sonst keine nebenläufigkeit
+
+Callable:
+wenn thread wert zruückgeben soll wird dafür Callable verwendet
+Klasse muss Callable-Interface implementieren
+klasse die Callable-Interface implementiert muss auch call() implementieren 
+Thread wird über ExecutorService gestartet
+Rückgabewert wird in Future-Objekt gespeichert
+Anschließend müssen ergebnisse aus Future-Objekt mit get() entommen werden 
+ist zum zeitpunkt an dem get() aufgerufen wird das ergebnis noch nicht da wartet get() bis es vorliegt
+get() erst starten wenn alle threads gestartet wurden --> sonst keine nebenläufigkeit
+
+CompletableFuture
+CompletableFuture erlaubt es verschiedene Aufgaben als abfolge zu definieren
+Komplexität der lösung reduziert sich im vergleich zu Callable/Runnable
+Threads werden automatisch erzeugt 
+durch die implementierung des Supplier-Interfaces werden Berechnungen/Operationen definiert
+
+Threadgruppen
+Jeder thread gehört zu gruppe 
+wird gruppe nicht angegeben wird thread der gruppe des aufrufers zugeteilt
+gruppe wird durch ThreadGropu-Objekt repräsentiert
+Gruppe von Threads ist baumartig strukturiert --> Gruppe kann weitere gruppe beinhalten
+Thread-Klasse hat Konstruktor für zuweisung einer gruppe
+gruppe eines threads kann nachträglich nicht verändert werden 
+Threadgruppen helfen bei verwaltung
+Threadgruppe hat keine join() methode 
+activeCount() methode fragt ab wie viele Threads in der gruppe noch aktiv sind
+
+Synchronisation
+bei lesezugriff kein kritischer Bereich
+um kritischen Bereich zu schützen können Locks oder das Schlüsselwort synchronized verwendet werden
+wenn objekt gesperrt ist können wait() und notify() aufgerufen werden
+Thread objekt besitzt warteliste
+wait() nimmt sperre temporär zurück und setzt aufrufenden Thread auf Warteliste
+notify() aktiviert einen beliebigen Thread auf der warteliste um seine arbeit fortzusetzen 
