@@ -1,0 +1,66 @@
+Adressformat für WEB- Ressource 
+Midestbestandteile: protokolle , domain , pfad 
+
+Protokoll: 
+http(Hypertext Transfer Protocol)
+https(Hypertext Transfer Protocol Secure)
+ftp/File Transfer Protocol)
+jdbc:postgres(Protokoll für java postres- db verb.)
+
+domain:
+Zusammenhängender Teilbereich eines hierarchischen Namensraumes, baumartige Struktur mit sub-domains
+toplevel : de
+secondlevel : google.de
+thirdlevel www.google.de
+
+Full Qualified Domain Name(FQDN):
+Aneinanderreihung von Knoten-Label des Baumes , durch Punkte getrennt, von unten nach oben
+www.google.de
+thirdlevel-label.secondlevel-label.toplevel-label
+
+Pfad :
+Besteht zumindest aus eiem Schrägstrich mit bezu zum hauptverzeichnis des Servers und gibt eine Datei oder 
+ein Verzeichnis auf dem Host an 
+/bla/blub/blae/unsinnsdatei.pdf
+opt. bestandteile im URL- Adressformat bei http sind Benutzer/Passwort, port,query,anker
+Protokoll://Benutzer:Passwort@FQDN:Port
+http://mrx:swordfish@www.iwo.de:123
+
+Objekt der Klasse URL erzeugen um Verbindung zu einem Host und einer Ressource aufnehmen zu können 
+Konstruktor überprüft ob adresse korrekt ist
+´überprüft nicht ob sie existiert
+durch aufruf des konstruktors wird protokoll festgelegt
+über getter können Informationen über URL objekt ausgelesen werden 
+
+Datenzugriff über URL objekt:
+openConnection(): gibt URLConnection objekt zurück welches verbindung zur ressource herstellt 
+openStream(): öffnet verbindung zu URL und liefert die Daten der Resosource durch ein Objekt der Klasse InputStream
+URLConnection objekte sind für empfang der inhalte der url objekte verantwortlich 
+URLConnection ist abstrakt , unterklassen implementieren protokoll abhängige varianten zb HttpURLConnection
+über URLconnecion lassen sich daten lesen und schreiben 
+
+durch openSteam() kann über den InputStream auf den Dateiinhalt zugegriffen werden 
+sobald daten gelesen sind wird datenstrom mit close() geschlossen (URL-Objekt noch offen)
+
+Inhalt einer URL-Resoource : 
+Konstruktor vom URL-Objekt extrahiert den im übergeben string enthaltenen protokollnamen(hier http)
+statische Methode getURLStreamHandler(http) findet klasse zur behandlung des Protokolls
+durch aufruf von Class.forName("sun.net.www.protocol.http.Handler") wird gepröft ob die als Parameter angegebene
+Klasse im System geladen ist ... falls nicht wird sie geladen
+
+newInstance() initialisiert dieKlasse und gibt ein Objekt handler  zur behandliung des HTTP Protokolls zurück
+openConnection() vom URL-Objekt ruft individuelle Methode openConnection() des relevanten Protokol-Handlers auf
+Protokoll-Handler weiß für sein Protokoll wie die Verbindung aufzubauen ist, zb fr WEB-Seiten gemäß HTTP-Protokoll
+getContent() erkennt Dateityp der URL-Resorce (durch Content-Handler) und liefert Inhalt auf den die URL verweist als Java-objekt
+in der klasse URL ist methode getContent durch openConnection().getContent() realisiert
+
+Protokoll Handler: 
+Schreibt entsprechend dem konkreten Protokoll die Kommunikationsmethodik vor, 
+überwacht Verbindung zum server
+stellt verbindung zu einem konkreten content-handler her
+
+Content handler: 
+Dateien verschiedener MIMETypen werden durch die Methode getContent() als java objekte zurück gegeben
+
+MIME(Multipurpose Internet Mail Extensions):
+Kodierstandart für Struktur und aufbau von e-mails und anderen Internetnachrichten zb. image/jpeg für Grafiken im jpeg Format
