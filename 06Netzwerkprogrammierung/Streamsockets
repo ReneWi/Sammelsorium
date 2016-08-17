@@ -1,0 +1,14 @@
+Server : 
+Server verfügt über server socket
+wartet durch accept() auf eingehende verbindung
+bei verbindungswunsch wird neues socket erzeugt
+socket objekt kann für stream erzeugung genutzt werden 
+nach der abarbeitung sollte stream geschlossen werden 
+
+client: 
+client versucht verbindung mit einem socket zum server aufzubauen
+bei erfolgreicher verbindung erzeugt client stream aus socket objekt
+daten werden anschließend an server übermittelt
+wenn keine anfragen anliegen werden streams und verbindung geschlossen
+
+für abarbeitung mehrerer anfragen müssen threads erstellt werden
