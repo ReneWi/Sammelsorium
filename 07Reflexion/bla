@@ -1,1 +1,30 @@
-bla
+Vorteile : 
+wird genutzt um Informationen über laufende Programme abzufragen oder Manipulationen zur laufzeit vorzunehmen
+Programm hat die möglichkeit objekte externer klassen über vollqualifizierten namen zu erstellen
+mit Reflection ann Klassenbrowser erstellt werden , welcher Informationen über zb attribute einer klasse bereitstellt 
+damit kann man visuelle Entwicklungsumgebungen erzeugen
+debugger muss zugriff auf private attribute haben
+
+nachteile: 
+reflection nur nutzen wenn es keine anderen alternativen gibt
+performance mit reflexion ist langsamer
+mit reflectionen können manipulationen vorgenommen werden die im normalfall nicht erlaubt sind -> kann zu fehlern führen 
+
+Metainformationen auslesen : 
+Klasse Class gehört zur Reflection api und stellt methoden zur lieferung von metadaten von klassen/interfaces zur verfügung
+Variable class ist in jeder Klasse deklariert, enthält Class-Objekt der Klasse
+Nur JVM kann Class-Objekte erzeugen da der Kontruktor private ist außerdem sind die Objekte unveränderbar
+ist instanz der klasse vorhanden kann mit getClass() das Class objekt erzeugt werden
+jede klasse verfügt über attribut class welches auf Class objekt verweist
+Auch primitive typen verfügen über class ... alternativ kann auch TYPE der Wrapperklasse genutzt werden 
+steht beim kompilieren der name der klasse noch nicht fest so verwendet man forName(String) ist klasse noch nicht geladen 
+so wird sie dadurch nachgeladen und an den namen gebunden 
+mit getSuperclass() erhält man das class objekt der oberklasse
+
+getFields(): liefert alle  als public deklarierten attribute
+getConstructors(): liefert alle als public deklarierten konstruktoren
+getMethods(): Informationen über methoden können hiermit ausgelesen werden
+
+Objekte erzeugen und manipulieren: 
+Vor jedem Constructor-Objekt kann mit der methode newInstance() ein neues Objekt erzeugt werden 
+Mithilfe von invoke() eines Method-Objektes kann eine Meghode aufgerufen werden
