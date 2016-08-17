@@ -1,1 +1,40 @@
-bla
+Netzwerkpartner müssen sich auf gemeinsames Protokoll einigen
+Host : Maschine(Computer/Server) im netzwerk mit eindeutiger Nummer/adresse
+Protokoll (in Informatik und Telekommunikation): 
+Regeln zur festlegung von identifikation,format,inhalt,bedeutung und reihenfolge der gesendeten Nachrichten zwischen 
+verschiedenen Computern
+Paket : nachricht wird im internet in identifizierbare(Daten-Teil-)Pakete untereilt,
+Ip-Nummer : eindeutige Adresse, die Host Kennzeichnet
+IPv4 : 32-Bit-zahl aufgeteilt in Host und Netzwerk bsp : 172.217.21.14
+IPv6: 128-Bit-Zahl weiterentwicklung von ipv4 bsp: 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+Hostname: symbolischer Name für die ip-nummer, durch DNS(Domain Name Service) oder NIS(Network Information Services)
+werden Namen auf ip-Adressen abgebildet
+Router: ein Host der Pakete zwischen verschiedenen Netzwerken weiterreicht
+Port(-Nummer): zusätzliche AdressKomponente von 16 Bits (0 bis 65535) die bestimmten dienst in Netzwerk identifiziert
+Socket: Adresse eines best. Dienstes auf best. Host in best Netzwerk, Komination aus ip und port 
+bsp : 192.168.0.1:80 (port nummer 80 auf ip 192.168.0.1.)
+Verbundene rechner kommunizieren über protokolle maßgeblich ist TCP/IP (Transmission Control Protocol/ Internet Protocol)
+TCP/IP ist mehrschichtig
+oberste schicht: Anwendungsschicht umfasst alle protokolle die mit Anwendungsprogrammen zusammen arbeiten
+nutzen darunter liegende Protokolle und Netzwerkinfrastruktur für Austausch anwendungsspezifischer Daten
+
+Sockets bilden Schnittstelle zw Protokoll-implementierungen im betriebssystem und Applikations-Software
+verbindung mit entfernten rechnern über url ist mit sockets realisiert
+client erzeugt client socket und stellt dadurch verbindung zum server her
+server erzeugt server socket und wartet dass sich ein client versucht mit ihm zu verbinden
+jeder serverdienst läuft auf einem anderen port
+
+Stream sockets: 
+benutzt TCP/IP Protokoll
+verbindung wird aufrechterhalten während übertragung besteht
+größere datenmengen werden in kleinere pakete unterteilt 
+zuverlässige übertragung 
+sicherheit vor geschwindigkeit
+
+datagramm sockets: 
+Benutzt UDP/IP protokoll
+es wird keine verbindung zwischen kommunikationspartner aufgebaut
+datagram werden einzeln verschickt und gelangen auf verschiedenen wegen und in unterschiedlicher reihenfolge ans ziel
+übertragung nicht zuverlässig 
+geschwindigkeit vor sicherheit
+
