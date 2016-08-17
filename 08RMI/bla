@@ -67,5 +67,5 @@ server starten
 java-Djava.security.manager -Djava.security.policy = java.policy MeinServer
 Online service für die übertragen statrten zb http server 
 java HTTPServer PfadZurKlasse
-Client starten und Codebase angeben, bei welcher der server den bytecode beziehen kann 
+Client starten und Codebase angeben, bei welcher der server den bytecode beziehen kann  
 java -Djava.rmi.server.codebase = http://Adresse:Port/ MeinClient
