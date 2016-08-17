@@ -1,1 +1,71 @@
-bla
+RMI ( Remote Metode Invocation)
+Protokoll welches auf TCP/IP aufsetzt 
+Details der Netzwerkverbindung bleiben verborgen
+Eigenschaften : 
+Methoden für objekte können aufgerufen werden , die von einer anderen JVM erzeugt und verwaltet werden 
+Für entwickler sieht entfernter Methoden aufruf aus wie lokaler aufruf
+entfernt aufrufbrare methoden werden in Remote-interface deklariert
+Interface stellt sogenannten vertrag zwischen client und server dar
+netzspezifischer code der codierung und übertragung von aufrufparametern und rückgabewerten ermöglicht wird zur laufzeit erzeugt (ab se5.0)
+um reerenz auf entferntes objekt zu bekommen nutzt client die Registry
+RMI bietet methoden für übertragung von objekten und das laden des Bytecodes der zugehörigen klassen falls diese nicht lokal vorhanden sind
+RMI ist rein java basiert dh server und client müssen in java programmiert sein 
+
+Remote Interface : 
+wird vom Interface Remote abgeleitet
+Sowohl Server als auch client müssen remote interface besitzen 
+Jede methode des remote interface muss RemeoteException werfen 
+
+Remote objekt : 
+muss das remote interface und vorgeschriebenen methoden implementieren 
+muss von UnicastRemoteObject abgeleitet sein 
+alle konstruktoren und methoden werfen remote exception 
+jedes remote objekt muss Serializable implementieren dieses wird allerdings bereits durch UnicastRemoteObject implementiert
+Muss nur dem server bekannt sein
+
+Stub und Skeleton: 
+Stub(Clientseitig)
+Skelleton(Severseitig)
+sind ab java 5.0 automatisch zur laufzeit generierte stellvertreter objekte (proxys)
+sind verantwortlich für kommunikation zw client und server
+vor java 5.0 mussten sie manuell mit rmic erzeugt werden 
+stub object ist ein lokaler stellvertreter für ein entferntes objekt
+
+RMI Registry: 
+ist dienst derbei dem der server seine remoteobjekte registrieren muss
+dienst muss immer aus dem verzeichnis gestartet werden in dem der binärcode des servers liegt 
+jeder eintrag besteht aus namen und objektreferenz
+client kann dadurch eine erste referenz auf ein entferntes objekt als einstiegspunkt erhalten 
+rmiregistry benutzt wenn nicht anders angegeben port 1099
+
+Server 
+Der Server erzeugt eine Instanz des Remoteobjects und muss dieses bei der rmiregistry registrieren
+dafür muss rmiregistry vorher gestartet werden dies kann programmextern oder intern erfolgen 
+rmi system sorgt dafür dass nach beenden der main methode der server weiter läuft
+
+Client
+mit Naming.lookup("//host/dienstname") besorgt sich der client eine referenz auf das stub objekt welches unter dem dienstnamen in der 
+registry eingetragen ist
+client kann anschließend die methoden des objekts wie bei likalen objekten aufrufen 
+
+Regeln : 
+einfache datentypen (int double .....) ewrden by value übertragen 
+lokale objekte werden zunächst serialisiert übertragen und dann vom server deserialisiert .... objekte werden also by value übertragen
+exportierte entfernete objekte werden by reference übertragen dh die stub objekte und nicht die kopien der originale werden übertragen 
+jeder methoden aufruf wird in einem eigenen thread abgearbeitet ggf muss also synchronisiert werden
+
+Dynamisches nachladen von bytecode
+möchte der client ein serialisierbares objekt an den server übertragen, dessen bytecode ihm nicht zur verfügung steht 
+so muss der code ebenfalls zur laufzeit übertragen werden 
+soll bytecode dynamisch nachgeladen werden so muss der serveer einen Security Manager nutzen da das dynamische laden von bytecode im 
+allgemeinen eine unsichere aktivität ist
+durch angabe einer policy datei koönnen zugriffsrechte auf den server gesetzt werden 
+
+Ablauf dynamischen bytecode laden : 
+Registry starten (start rmiregistry)
+server starten 
+java-Djava.security.manager -Djava.security.policy = java.policy MeinServer
+Online service für die übertragen statrten zb http server 
+java HTTPServer PfadZurKlasse
+Client starten und Codebase angeben, bei welcher der server den bytecode beziehen kann 
+java -Djava.rmi.server.codebase = http://Adresse:Port/ MeinClient
