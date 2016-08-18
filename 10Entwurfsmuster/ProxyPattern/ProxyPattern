@@ -1,0 +1,35 @@
+Motivation
+Erstellen eines ERsatzobjektes um zugang zu einem anderen objekt zu erreichen
+Remote Prox:
+Lokaler (client-seitiger) ersatz für objekt in anderem adressraum insbesondere bei client-server anwendungen 
+Virtual Proxy: einsparung ressourcen , objektanwendung nur falls unbedingt erforderlich 
+Protection Proxy : zugangskontrolle zu objekt mit speziellen rechten
+
+Bespiele von Anwendungsproblemen
+Handhaben von grafischen Bestandteilen mit Dokumenteneditor, zb rasterbilder. Schnelles öffnen eines Dokuments dadurch dass nur die 
+bestandteile der ersten seite tatsächlich geladen ewrden bilder auf nachfolgenden seiten erst auf bedarf beim scrolln laden statt dem 
+eigentlichen bild wird ein proxy installiert welcher für instantieerung des bildes auf bedarf sorgt
+
+lange listen auf zb smartphones deren inhalte im nicht sichtbaren bereich erst dann aus dem internet geladen werden wenn sie angezeigt
+werden sollen die liste macht aber den eindruck alle elemente bereits geladen zu haben das nachladen wird im hintergrund oft mit threads 
+ermöglicht
+
+ Bestandteile : 
+ Proxy(ImageProxy): 
+ verwaltet eine referenz auf RealSubject methoden-interface von proxy identisch mit dem RealSubject und Subject . kontrolliert zugang zu 
+ RealSubject
+ Subject('Graphic)
+ RealSubject(Image)
+ 
+ Typische aufgaben des remote proxy: 
+ erzeugt request mit argumenten und sendet diesen an RealSubject oft verwendung einer methode invoke
+ wird oft bei netzwerk-anwendungen verwendet, zb RMI- Anwendungen 
+ Berechnungen laufen dann oft auf dem server
+ 
+ Typische aufgaben des virtual proxy: 
+ speichert metadaten über RealSubject zb eine hochaufgelöste bilddatei. sinnvolle metadaten sind zb die größe des bildes oder auch ein 
+ kleines vorschaubild oder die dominante hintergrundfarbe . hier kann der eindruck verschafft werden dass das programm schnell lädt
+ InternetBrowser lesen zuerst die größe der bilder aus dem html quelltext aus und zeichnen platzhalter in der richtigen größe
+ bevor das große bild geladen und angezeigt wird
+ 
+ 
