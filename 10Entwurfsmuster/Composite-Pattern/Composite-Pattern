@@ -1,0 +1,21 @@
+Motivation
+Repräsentation rekursiven, part-whole beziehung von gegenständlichen Objekten
+einheitliche bahandlung von atomaren bestandteilen bzw Kompositionen durch den client
+baumartige Datenstrukturen deren komplexe funktionalität gehandhabt werden soll
+insbesondere soll programmieraufwand von dynamischer breite/tiefe unabhängig sein 
+
+Bestandteile: 
+Comonent(Graphic)
+Interface besteht aus Operationen zum benutzen und verwalten von bestandteilen der Komposition
+Leaf(Recatangle, Line, Text)
+Definiert Verhaltne von Component ohne Kinder. Interface besteht aus Operationen zum benutzen diese sind für spez Gegenstände 
+zu implementieren 
+Composite(Figure)
+Definiert das Verhalten einer Component mit Kindern und implementiert die zur Verwaltung der Kinder relevanten Operationen
+Client
+Manipuliert bzw. verwendet Komposition einheitlich durch Interface von component
+
+Zusätzliche erläuterung: 
+ist Empfänger des Client Requests ein Leaf so wird der Request direkt behandelt ansonsten erfolgt weiterleitung an Kinder
+Client "weiß" davon nichts -> vereinfachung des Client Codes
+Hinzufügen und Entfernen von Components erfordert keine Änderung des Client-Codes
