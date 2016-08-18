@@ -1,0 +1,8 @@
+systeme mit vielen optionen und konfigurationsmöglichkeiten 
+die software ähnelt der plattform mit der sie gebaut wurde 
+Beispiel : datenmodelle, die keine konkrete anwendungsbezogene struktur vorgeben, wohl aber eine Verwaltungsschicht, die die geforderten 
+Datenstrukturen dynamisch erzeugen kann. 
+Es soll oft die Flexibilität der Software erhöht werden 
+Problem : Schwer beherrschbar und Performance-Probleme
+Gegenmittel : 
+nicht unnötig viel Flexibilität einbauen 
