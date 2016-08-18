@@ -1,0 +1,6 @@
+es werden hart-kodierte literale als konstanten im quelltext verwndet
+verwndung von konstanten in funktionsaufrufen sind schlecht verständlich besonders wenn kein variablen name oder kommtear vorhanden ist
+änderung von konstanten an verschiedenen stellen in quelltext ist fehleranfällig
+
+gegenmittel : 
+konstanten immer als variablen mit aussagekräftigen namen deklarieren 
