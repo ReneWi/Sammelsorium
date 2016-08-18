@@ -1,0 +1,8 @@
+Software die keine erkennbare struktur oder software architektur besitzt
+wenig aussagekräftige funktions- und variablennamen
+keine/ kaum dokumentation
+wartbarkeit und erweiterbarkeit kaum gegeben
+Gegenmittel : 
+nutzung ovn mustern
+funktionalität in pakete gliedern 
+klassen / funtionen mit klaren aufgabenbereichen und verständlichen namen definieren 
