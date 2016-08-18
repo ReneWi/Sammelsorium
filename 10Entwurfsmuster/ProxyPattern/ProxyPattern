@@ -32,4 +32,12 @@ ermöglicht
  InternetBrowser lesen zuerst die größe der bilder aus dem html quelltext aus und zeichnen platzhalter in der richtigen größe
  bevor das große bild geladen und angezeigt wird
  
+ Typische aufgeben des Protection Proxy: 
+ Überprüft zugangsrecht des Client zum Server Object
+ Beispiele : 
+ 
+ Datenbank ähnliche struktur, die überprüft welche zugriffe vom aktuellen Benutzer elaubt sind
+ Roboter der einen bestimmten arbeitsbereich hat und so nur psitionen abfahren kann die auch physikalisch möglich sind
+ DerProtection Proxy verhindert das Weiterrechen von ungülgiten befehelen und gibt zb warnung aus . hier können
+ beschädigungen des roboters durch programmierer und benutzer verhindert werden 
  
