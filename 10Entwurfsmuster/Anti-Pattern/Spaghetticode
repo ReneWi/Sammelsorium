@@ -1,0 +1,6 @@
+häufige nutzung von sprungbefehlen(break/continue in java, goto in c/c++) im code
+kontrollfluss der software ähnelt topf spagghetti
+debuggen schwer
+schlechte wartbarkeit wiederverwendbarkeit
+gegenmittel : 
+keine sprung - oder goto- befehle nutzen !!!11
