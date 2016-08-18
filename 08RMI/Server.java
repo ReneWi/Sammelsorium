@@ -8,6 +8,8 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;
 
+import beispiel1.NullSecurityManager;
+
 public class Server extends UnicastRemoteObject implements ServerRemote {
 
 	protected Server() throws RemoteException {
@@ -15,6 +17,9 @@ public class Server extends UnicastRemoteObject implements ServerRemote {
 		// TODO Auto-generated constructor stub
 	}
 	public static void main(String[] args) throws RemoteException, MalformedURLException, AlreadyBoundException {
+		if (System.getSecurityManager() == null) {
+			System.setSecurityManager(new rmi.NullSecurityManager());
+		}
 		LocateRegistry.createRegistry(1099);
 		Remote remote = new Server();
 		Naming.bind("server", remote);
