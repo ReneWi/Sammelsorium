@@ -1,0 +1,43 @@
+verteilte versionsverwaltung
+definition : 
+wird auch Versionskontrolle(version controll) , Revisionskontrolle (revision control ) oder Quellcode-Kontrolle (source controll) genannt
+Verwaltung von mehreren versionen von dokumenten und insbesondere quellcode für Computerprogramme
+funktioniert am besten mit text-basierten dateiformaten während binärdateien sich weniger eignen
+
+Eigenschaften : 
+Verwaltung und abgrenzung unterschiedlicher versionen
+änderungen können nachvollzogen werden (historie)
+änderungen können rückgängig gemacht werden 
+sinnvoll zur fehlersuche wenn zb aktuelle Version unerwartet instabil ist 
+sinnvoll wenn aus versehen code gelöscht wurde
+es können mehrere entwicklungszweige (branch) parallel verwaltet werden 
+verschiedene experimentelle features können getrennt ovn der stabilen hauptversion verwaltet werden 
+nach abschuss eines zweiges kann dieser wieder mit dem hauptzweig zusammengeführt werden(merge operation)
+
+Bekannte verwaltungssysteme :
+Open source : Subversion(SVN) , Git
+Proprietär: Microsoft Team Foundation Server, BitKeeper,...
+
+SVN : 
+Quelloffene versionsverwaltung für kleine projekte und teams
+zentrales projekt repository auf einem server
+clients verfügbar für alle wichtigen betriebssysteme
+nutzung typischerweise über 
+kommandozeile 
+grafische benutzeroberfläche (TortoiseSVN für Win , RabbitVCS für Ubuntu)
+eingebautes plugin für entwicklungsumgebung/IDE(zb subclipse für eclipse)
+ Grundbefehle : 
+ Checkout(svn checkout/co)
+ initiales herunterladen des repositorys 
+ aktueller stand (head revision9 oder bestimmte revision möglich 
+ Update/ aktualisierung (svn update/up)
+ herunterladen der aktuellen änderungen im server repository die seit update eingecheckt wurden 
+ wenn an dateien parallel gearbeitet wurde wird automatischer merge der daten versucht
+ es können konflikte entstehen
+ Add/Hinzufügen (svn add): 
+ hinzufügen von neuen dateien ins rep
+ nicht alle dateien müssen versioniert werden (zb temporäre dateien )
+ Commit/"Einchecken"(svn commit/ci)
+ Direktes hochladen der eigenen änderungen 
+ es sollte dokumentation geben
+ wenn server in der zwischenzeit änderungen von anderen angenommen hat ist update und merge notwendig
