@@ -1,0 +1,35 @@
+Motivation
+Übersetzen des Interfaces einer klasse in anderes interface welches der client erwartet 
+Zusammenarbeit von klassen trotz inkompatibler interfaces
+
+Beispiele von anwendungsproblemen:
+Editor-Implementierung unter Verwendung einer Komponente die schon zuvor implementiert wurde (Legacy-Code) aber andere Interfaces
+oder Namenskonventionen verwenden 
+Adaption des originalcodes wäre möglich aber zu aufwändig außerdem besteht gefahr durch modifikation fehler und Nebeneffekte zu erhalten
+
+Verwendung von vorkompilierten Programmbibliotheken deren quellcode nicht zur verfügung steht
+diese kann man ausführen aber nicht verändern deshalb kann man interface nicht direkt anpassen
+
+Einschub Programm-Bibliothek:
+Typischwerweise wird quelltext in form von maschinensprache übersetzt die auf dem prozessor ausgeführt wird
+viele programmiersprachen nutzen compiler (C / C++) , die direkt maschinencode für aktuelle Hardwarearchitektur(AMD64, Intel x86, ARM,...)
+generieren
+In Java wird Quelltext als zwischenstufe in Bytecode für JVM übersetzt (jar-format) JVM wandelt diesen zur laufzeit in maschinencode um
+Anpassung von Quellcode ist oft nicht möglich wenn software nicht open source ist ; besonders bei kommerziellen Programmbibli.ist dies oft 
+nicht der  fall ---> geheimnisse bewahren
+mit reserve-enginering kann man versuchen aus kompiliertem byte- oder maschinencode wieder quelltext zu erhalten
+Oft wird obfuskation eingesetzt um Bytecode/Maschinencode zu verschleiern und so reverse engineering zu erschweren
+anpassung fremden codes ist oft nicht möglich, daher adapter muster sinnvoll 
+
+Bestandteile : 
+Target(Shape): 
+definiert anwendungsspezifisches interface . Verwendung durch client
+Adaptee(TextWrite)
+Definiert bestehendes interface, welches adaptiert werden muss
+Adapter(TextShape): 
+Adaptiert Interface von TextWrite
+Client(DrawingEditor)
+Arbeitet nur mit Interface der klasse Shape
+
+Zusätzliche Erläuterung :
+weitterreichen des requests
