@@ -1,0 +1,8 @@
+stetige neuerstellung von vorhandener software
+bibliotheken werden nicht verwendet
+beispiel: implementierung eines Bubble-sort-algorithmus auch wenn bessere sortierfunktiion bereits vorhanden 
+Collections.sort in java zb
+
+gegenmittel 
+bibl. nutzen 
+aber: software lizenz der bib. beachten !!
