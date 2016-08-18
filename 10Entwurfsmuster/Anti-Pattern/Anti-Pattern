@@ -1,0 +1,15 @@
+Muster oder Pattern sind hilfreich...
+
+Muster in der Software-Entwicklung und im Projektmanagement beschreiben bewährte Lösungsansätze für immer
+wiederkehrende Prbleme und aufgaben in der Software-Entwicklung -> Pos Wissen wird genutzt!
+Umgekehrt sind schlechte Lösungsansätze auch lehrreich um zukünftig Fehler zu vermeiden -> Negatives Wissen wird genutzt !
+
+daher wird das gesammelte wissen aus fehlern auch int-pattern gennatn. es gibt bücher über das thema(Brown et al, 1998) "AntiPatterns:
+Refactoring Software, Architectures, and Projects in Crisis"
+
+schlechte lösungen werden oft wegen mangelnder erfahrung odr fehlender qualifikation gewählt. die konsequenzen sind : 
+längere entwicklungszeit und höhere Kosten
+schlecht wartbare Software (änderungen sind sehr aufwändig oder unmöglich)
+fehlerhafte oder unsichere implementierung
+
+Dies kann mitunter existenzbedrohend für Software-Unternehmen sein , wenn verträge nicht eingehalten werden 
