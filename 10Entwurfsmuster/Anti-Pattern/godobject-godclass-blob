@@ -1,0 +1,9 @@
+objekt oder klasse kann oder weiß zu viel 
+hauptklasse hat zugriff auf viele oder sogar alle andern objekte
+meist "bequem " um schnell ziele zu erreichen 
+Problem : ungünstig wartgare Struktur( keine Kapselung)
+daher Schlechte Wiederverwendbarkeit des Codes, da alles mit allem anderen zusammenhängt
+
+Gegenmittel: 
+aufteilung von verantwortlichkeiten / funktionalitäten 
+die meisten entwurfsmuster sorgen für bessere Kapselung
