@@ -1,1 +1,49 @@
-bla
+Refactoring
+Defininition
+Nicht-funktionale Änderung der Software
+Verbesserte Code-Lesbarkeit und Verändlichkeit
+Verringerte Code-Komplexität
+Dadurch verbesserte Wartbarkeit
+von kleineren Änderungen(Micro-Refactoring) bis hin zu 
+Änderungen der software Architektur
+
+Refactoring wird typerscherweise mit automatischen Werkzeugen durchgeführt, die oft direkt in Entwickulungsumgebung integriert sind
+Daher schneller zugriff mit wenig aufwand
+-> sehr nützliches Werkzeug im Programmieralltag
+
+3 Kategorien : 
+1. verbesserung von namensgebung und orten von code
+2. erhöhung von abstraktion
+3. auslagern von code in logischere teilbereiche
+
+Hinweis: verfügbarkeit in Abghängigkeit von der verwendeten entwicklungsumgebung und Programmiersprache
+Refactoring ist weitaus mehr als Suchen/Ersetzen. löst automatisch alle semantischen änderungen auf : 
+alle aufrufe von betroffenen attributen/methoden/klassen werden geändert
+es werden uU auch dateien umbenannt
+es können auch neue Klassen/dateien erzeugt werden 
+es gibt auch oft eine vorschau und auch warnungen falls es zu problemen kommt
+Vorraussetzung : code enthält keine kompilierfehler
+
+1) Verbesserung von Namensgebung und Orten von code
+attribut/methode/klasse/projekt umbennnen (rename method/fied...)
+attribut usw verschieben (move method usw)
+in oberklasse verschieben(pull up)
+in unterklasse verschieben(push down)
+für weitere siehe code
+
+2)erhöhung von abstraktion
+-Einkapselung von attributen(encapsulate Field)
+public attribute werden zu private/protected , es werden entsprechenede getter / setter erzeugt
+-typ generalisierung (geralize type)
+es werden automatisch passende oberklassen verwendet um mehr coder wiederverwenden/ teilen zu können 
+- automatisches generieren von Interfaces(Extract Interface) und Oberklassen(Extract Superclass) aus bestehenden Klassen
+an stellen , wo möglich wird dann automatisch der generellere typ verwendet 
+
+3) auslagern von code in logischere teilbereiche
+-methode extrahieren (extract method)
+eine größere Menge codezeilen wird in eine neue methode ausgelagert sodas andere funkionen / klassen den code auch nutzen können
+ein und ausgabe parameter werden automatisch bestimmt
+alternative zu copy/paste
+-klasse extrahieren(extract class) 
+teile einer klasse in eine neue klasse auslagern 
+zb sinnvoll um teil attribute in form von objekten weiterzugeben
