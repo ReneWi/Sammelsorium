@@ -1,0 +1,6 @@
+es wird eine neue funktionalität um oder über alte gelegt
+oft durch erweiterung eines bestehenden projekts 
+neue programmierer möchten oder können bestehende teile des programms nicht komplett verstehen oder verändern 
+durch derartige modifikationen geht die wartbarkeit gegen 0
+gegenmittel: 
+software struktur verstehen und neue anforderungen sauber implementieren oder integrieren 
