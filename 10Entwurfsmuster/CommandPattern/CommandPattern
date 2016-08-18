@@ -1,0 +1,29 @@
+Motivation:
+in bestimmten anwendungen sollen einzelne aktionen austauschbar sen ohne die schnittstelle des aufrufs der aktion zu verändern
+damit bleibt auf höchster abstraktionsebene der code erhalten und das programmverhalten kann dynamisch verändert werden
+speziell für auszuführende aktion/operation in einer klasse kapseln und als parameter übergeben
+
+Beispiel anwendungsproblem :
+GuI besteht z.B. aus Menuitems, die bei Bedienung bestimmte opererationen auslösen in der implementierungsphase sind diese operationen nicht
+vorhanden bzw bekannt sondern nur in der anwendungsphase. aufruf einer dummy- operation muss möglich sein. dies wird erreicht indem die 
+operation selbst in einem eienem objet verpackt wird
+
+Bestandteile : 
+Command(GUICommand)
+Deklariert Interface zur ausführung einer Dummy-Operation oder realen Operation
+Invoker(MenuItem)
+Verwendet das interface von command . operation Action() in Receiver taucht hier nicht auf (Entkopplung)
+ConcreteCommand(PasteCommand, CutCommand)
+implementiert Execute() durch aufruf einer korrespondierenden Operation von receiver
+Receiver(Document)
+Enthält die Implementierung von relevanten Operationen
+Client(Application)
+Erzeugt Instanz von ConcreteCommand Klasse mit zugehörigen Receivern, sowie Instanz von Invoker und bindet sie zusammen
+
+Zusätzliche Erläuterung : 
+einführung Klasse Command mit interface für Execute() . subklassen davon definieren jeweils ein Receiver-Action Paar d.h. speichern des 
+Empfängers des Requests in Variable und implementieren Execute(). Jedes Menüfeld ist instanz einer MenuItem klasse, 
+welche von applikation erzeugt ird diese instanz hat referenz von Command Klasse Objekten . letzterer wird die instanz einer speziellen
+subklsse von Command zugewiesen zb Instanz vom PasteCommand
+Polymorphismus erlaubt allen MenuItem instanzen den einheitlichen Operationsaufruf command.execute() wobei aber implitz die jeweils 
+indieviduelle Implementierung angewendet wird , zB document.past()  
