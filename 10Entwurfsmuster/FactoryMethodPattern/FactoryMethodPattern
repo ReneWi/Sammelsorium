@@ -1,0 +1,23 @@
+Motivation:
+Definiert einheitliches Interface zur erzeugung von objekten (Fabrik) wobei die Objekte von unterschiedlichen Klassen 
+sein können . subklassen entscheiden , wie instantiiiert wird
+die erzeugten objekte entsprechen einem gemeinsamen interface oder einer oberklasse. in java könnte dies auch vom typ object sein 
+sodass eine methode theoretisch beliebige typen erzeugen kann
+eine reine funktion die objekte verschiedener typen zurückgibt ist nachteilig: objekte können "nackt" erzeugt werden und 
+eventuelle kopplungen mit anderen objekten werden nicht gesetzt. daher sind die factory-klassen auch oft unterklassen, sodass die 
+oberklasse notwendige kopplungen und verarbeitungsschritte erzwingt. dies ist ein wichtiger aspekt zur wahrung der konsistenz bei 
+erweiterungen der software
+
+Beispiele von anwendungsproblemen
+Kontextabhängige erzeugung eines fensters eines bestimmten typs in einer gui
+
+Bestandteile : 
+Product(Window)
+Definiert Basisklasse für menge von "Produkt-Typen"
+Product_spez(Window_cl1/2)
+spezielle abgeleitete klasse je "Produkt-Typ"
+Creator(Editor)
+Deklariert FactoryMethod(CreateWindow), abstrakt oder mit Default-Implementierung. Ruft konkrete FactoryMethod von klasse
+ConcreteCreator auf
+ConcreteCreator(ConcreteEditor)
+Überschreibt FactoryMethod der basisklase und erzeugt Instanz von Produkt_spez.
