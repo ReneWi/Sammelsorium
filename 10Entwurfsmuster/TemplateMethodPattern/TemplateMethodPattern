@@ -1,0 +1,18 @@
+Motivation:
+Definiert in einer methode das skelett eines algorithmus für implementierung einzelner schritte sind subklassen verantwortlich. 
+struktur der methode für verschiedene Anwendungen unverändert
+die konkrete umsetzung der einzelnen schritte ist austauschbar aber die  grundlegende ist gleich 
+Das endergebnis muss bei austausch der einzelnen schritte nicht unbedingt gleich sein 
+
+Beispiel eines Anwendungsproblems: 
+Umsetzung von mehreren Spielen mit ähnlicher grundstruktur: zb Mau-Mau und UNO - beides rundenbasierte kartenspiele, 
+die einen im wesentlichen gleichen ablauf haben. nur die konkreten karten und punktzählungen sind anders 
+einheitliche sequenz von ablaufschritten zur handhabung eines fensters in einer gui
+
+Bestandteile : 
+AbstractClass(Window):
+Enthält abstrakte primitive Operationen welche in subk,lassen implementiert sind . implementiert skelett der template methode(Display)
+und aufruf primitiver operationen
+
+Es sind auch primitive einschubmethoden (hook-operationen) möglich . hooks sind eine möglichkeit an bestimmten dafür vorgesehenen stellen, 
+erweiterungen von anderen entwicklern zu erlauben 
