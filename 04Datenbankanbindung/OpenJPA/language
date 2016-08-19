@@ -1,0 +1,1 @@
+Query q = con.getEntityManager().createQuery("SELECT o FROM Object o ORDER BY o.attribut DESC) DESC von groß nach klein ASC von klein nach groß
