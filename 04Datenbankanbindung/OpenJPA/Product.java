@@ -21,7 +21,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 @Entity
 @Table(name = "products")
-public class Product  {
+public class Product  implements Serializable{
 	@Id
 	@GeneratedValue ( strategy = GenerationType.IDENTITY, generator = "products_SEQ ")
 	private long id;
@@ -32,6 +32,7 @@ public class Product  {
 	@Persistent
 	private SimpleIntegerProperty quantity = new SimpleIntegerProperty();
 	
+	protected Product(){}
 
 	public long getId() {
 		return id;
